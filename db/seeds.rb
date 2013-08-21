@@ -32,14 +32,14 @@ Mansion House Bristol, Clifton Down, Bristol, BS8 3LJ
   """
 })
 
-venue_photos = VenuePhoto.create!([
-  { event_id: event.id, file: seed_image("venue_photos/1.jpg") },
-  { event_id: event.id, file: seed_image("venue_photos/2.jpg") },
-  { event_id: event.id, file: seed_image("venue_photos/3.jpg") },
-  { event_id: event.id, file: seed_image("venue_photos/4.jpg") }
-])
+#venue_photos = VenuePhoto.create!([
+#  { event_id: event.id, file: seed_image("venue_photos/1.jpg") },
+#  { event_id: event.id, file: seed_image("venue_photos/2.jpg") },
+#  { event_id: event.id, file: seed_image("venue_photos/3.jpg") },
+#  { event_id: event.id, file: seed_image("venue_photos/4.jpg") }
+#])
 
-event.primary_venue_photo = venue_photos.last.id
+#event.primary_venue_photo = venue_photos.last.id
 event.save!
 
 butlers = Group.create!({
