@@ -1,10 +1,9 @@
 source "https://rubygems.org"
-source "https://rails-assets.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
 gem "rails", "4.1.6"
 # Use mysql as the database for Active Record
-gem "mysql2"
+gem "pg"
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 4.0.3"
 # Use Uglifier as compressor for JavaScript assets
@@ -50,28 +49,14 @@ group :development, :test do
   gem "rspec-rails"
 end
 
-group :production do
-  # Fix assets on heroku
-  # http://stackoverflow.com/questions/18826604/not-deploying-to-heroku-correctly
-  gem "rails_log_stdout",           github: "heroku/rails_log_stdout"
-  gem "rails3_serve_static_assets", github: "heroku/rails3_serve_static_assets"
-
-  ###### WARNING:
-  # Include 'rails_12factor' gem to enable all platform features
-  # See https://devcenter.heroku.com/articles/rails-integration-gems for more information.
-  gem "rails_12factor"
-  gem "thin", "~> 1.6.1"
-end
-
 gem "active_model_serializers"
 gem "foundation-rails"
 gem "haml-rails"
 gem "simple_form"
 gem "sorcery"
-gem "carrierwave"
+#gem "carrierwave"
 gem "mini_magick"
-gem "fog"
-gem "pg"
+#gem "fog"
 gem "kramdown"
 gem "angularjs-rails"
 gem "delayed_job_active_record"
@@ -79,11 +64,13 @@ gem "delayed_job_web"
 gem "kaminari"
 gem "draper"
 
-gem "rails-assets-datetimepicker"
-gem "rails-assets-select2"
-gem "rails-assets-blueimp-file-upload"
-gem "rails-assets-Justified-Gallery"
-gem "rails-assets-nprogress"
-gem "rails-assets-lightbox2"
-gem "rails-assets-lodash"
-gem "rails-assets-restangular"
+source "https://rails-assets.org" do
+  gem "rails-assets-datetimepicker"
+  gem "rails-assets-select2"
+  gem "rails-assets-blueimp-file-upload"
+  gem "rails-assets-Justified-Gallery"
+  gem "rails-assets-nprogress"
+  gem "rails-assets-lightbox2"
+  gem "rails-assets-lodash"
+  gem "rails-assets-restangular"
+end
