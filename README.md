@@ -15,10 +15,6 @@ Wedding on Rails in a Ruby on Rails application that I am using for my own weddi
 - RSVP's are taken on the website
 - Aggregated RSVP notifications 
 
-## Roadmap
-- Theme support
-- Markdown support
-
 ## Installing
 
 ```
